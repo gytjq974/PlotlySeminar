@@ -1,0 +1,62 @@
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+</head>
+
+<body>
+	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+</body>
+
+var trace1 = {
+  x: [1, 2, 3, 4, 5],
+  y: [1, 6, 3, 6, 1],
+  mode: 'line',
+  type: 'scatter',
+};
+
+var trace2 = {
+  x: [1.5, 2.5, 3.5, 4.5, 5.5],
+  y: [4, 1, 7, 1, 4],
+  mode: 'line',
+  type: 'scatter',
+};
+
+var data = [ trace1, trace2 ];
+
+var layout = {
+  title: {
+    text: 'sample plot'
+  },
+  xaxis: {
+    title: {
+      text: 'X'
+    }
+  },
+  yaxis: {
+    title: {
+      text: 'Y'
+    }
+  },
+  width: 1500,
+  height: 700,
+};
+
+var options = {
+  scrollZoom: true,
+  showLink: false,
+  modeBarButtonsToRemove: [
+    'toggleSpikelines',
+    'hoverClosestCartesian',
+    'hoverCompareCartesian',
+  ],
+  displaylogo: false,
+  displayModeBar: true,
+  toImageButtonOptions: {
+    filename: 'image_filename',
+    width: 1500,
+    height: 800,
+    format: 'png'
+  }
+}
+
+Plotly.newPlot('myDiv', data, layout, options);
