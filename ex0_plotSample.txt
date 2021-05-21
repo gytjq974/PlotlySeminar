@@ -1,3 +1,5 @@
+// Html
+<HTML>
 <head>
 	<!-- Load plotly.js into the DOM -->
 	<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
@@ -6,7 +8,11 @@
 <body>
 	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
 </body>
+</HTML>
+// Html End
 
+//JavaScaript
+// Data
 var trace1 = {
   x: [1, 2, 3, 4, 5],
   y: [1, 6, 3, 6, 1],
@@ -22,7 +28,9 @@ var trace2 = {
 };
 
 var data = [ trace1, trace2 ];
+// Data End
 
+// Layout
 var layout = {
   title: {
     text: 'sample plot'
@@ -40,7 +48,9 @@ var layout = {
   width: 1500,
   height: 700,
 };
+// LayoutEnd
 
+// Option
 var options = {
   scrollZoom: true,
   showLink: false,
@@ -58,5 +68,7 @@ var options = {
     format: 'png'
   }
 }
+// Option End
 
-Plotly.newPlot('myDiv', data, layout, options);
+Plotly.newPlot('myDiv', data, layout, options); // Plot 그리기
+//JavaScaript End
