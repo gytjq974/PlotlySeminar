@@ -1,0 +1,1 @@
+{"type":"FeatureCollection","features":[{"type": "Feature", "geometry": {"type": "Point", "coordinates": [126.9783, 37.5985]}, "properties": {"city": "seoul", "country": "kr", "region": "11", "geopoint": [37.5985, 126.9783], "longitude": 126.9783, "latitude": 37.5985, "accentcity": "Seoul", "population": 10323448}}]}
